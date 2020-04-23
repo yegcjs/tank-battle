@@ -1,12 +1,11 @@
 #pragma once
 
-int cur_time;
-
-void start();
+//return map selected
+int start();
 
 //return a code for game result
-//if win: 0
-int gaming();
+//if win: 0, lose: -1
+int gaming(int map_num);
 
 //show ending according to the game result
 //return true if restart, return 0 if not

@@ -9,6 +9,12 @@ struct xy {
 	xy(int X, int Y)
 		:x(X), y(Y){}
 	xy() { x = y = 0; }
+	xy operator+(const xy& tmp) {
+		return xy(x + tmp.x, y + tmp.y);
+	}
+	xy operator-(const xy& tmp) {
+		return xy(x - tmp.x, y - tmp.y);
+	}
 };
 enum Action{up,down,left,right,shoot,still};
 
@@ -21,29 +27,39 @@ protected:
 public:
 	Object(xy position, Action direction, int refresh_interval);
 	Object(const Object& obj, const int refresh_interval);
-	void move_to(xy new_position);
+	//if time is up for the object to update
+	bool timeup();
+	void move();
 	void set_direction(Action direction);
 	int start_time() const;
+	int get_interval() const;
+	int set_interval(int new_interval);//return the old one
 	xy position() const;
-	Action direction() const;
+	xy direction() const;
 };
 
 class Tank :public Object {
 protected:
 	int atk, hp;
+	bool shooting;
 	Action actn;
 public:
 	Tank(int attack,int health_point,int refresh_interval,xy position,Action direction);
 	//return remained hp
-	int attacked();
+	int attacked(int bullet_attack);
 	int get_hp()const;
+	int get_attack()const;
 	Action next_action() const;
+	bool isShooting() const;
+	void stopShooting();
+	int set_hp(int new_hp);//return the previous hp
+	int set_attack(int new_attack);//return the previous atk
 };
 
 class Enemy : public Tank {
 public:
 	Enemy(int attack, int health_point, int refresh_interval, xy position, Action direction);
-	//probablity: 10% not change, 20% each direction, 10% shoot
+	//probablity: 35% not change, 20% each direction, 10 shooting
 	Action act();
 };
 

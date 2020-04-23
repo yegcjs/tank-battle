@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Buff.cpp" />
     <ClCompile Include="Function.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
@@ -145,10 +146,23 @@
     <ClCompile Include="Painter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Buff.h" />
     <ClInclude Include="Function.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Painter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="icons\base.icon" />
+    <None Include="icons\brick.icon" />
+    <None Include="icons\bullet.icon" />
+    <None Include="icons\empty.icon" />
+    <None Include="icons\grass.icon" />
+    <None Include="icons\iron.icon" />
+    <None Include="icons\spown.icon" />
+    <None Include="icons\tank1.icon" />
+    <None Include="icons\tank2.icon" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="资源文件\icons">
+      <UniqueIdentifier>{b1b55b6f-1608-40fa-a665-5ae9556dce97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -30,6 +33,9 @@
     <ClCompile Include="Painter.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Buff.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Function.h">
@@ -44,5 +50,38 @@
     <ClInclude Include="Painter.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Buff.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\brick.icon">
+      <Filter>资源文件\icons</Filter>
+    </None>
+    <None Include="icons\empty.icon">
+      <Filter>资源文件\icons</Filter>
+    </None>
+    <None Include="icons\grass.icon">
+      <Filter>资源文件\icons</Filter>
+    </None>
+    <None Include="icons\iron.icon">
+      <Filter>资源文件\icons</Filter>
+    </None>
+    <None Include="icons\base.icon">
+      <Filter>资源文件\icons</Filter>
+    </None>
+    <None Include="icons\bullet.icon">
+      <Filter>资源文件\icons</Filter>
+    </None>
+    <None Include="icons\spown.icon">
+      <Filter>资源文件\icons</Filter>
+    </None>
+    <None Include="icons\tank1.icon">
+      <Filter>资源文件\icons</Filter>
+    </None>
+    <None Include="icons\tank2.icon">
+      <Filter>资源文件\icons</Filter>
+    </None>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>
